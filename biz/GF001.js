@@ -63,7 +63,7 @@ module.exports = function GF001(app,data){
             var self = this;
             var commandT = '/usr/local/atstar/voicestar/bin/fs_cli -x \'luarun '+bizName+'.lua [callNo] [wav] [times]\'';
             _callouts.forEach(function(v){
-                var strCommand = commandT.replace('[callNo]',v).replace('[wav]','FT001-'+self.request.body.caller+'.wav').replace('[times]',2);
+                var strCommand = commandT.replace('[callNo]',v).replace('[wav]',self.request.body.caller+'.wav').replace('[times]',2);
                 //console.log(strCommand);
                 exec(strCommand)
                     .then(function(result){
