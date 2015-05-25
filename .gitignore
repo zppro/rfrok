@@ -32,3 +32,8 @@ node_modules
 
 # window c#
 .csharp
+
+# data #
+data
+dataP
+dataT
